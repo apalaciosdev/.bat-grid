@@ -1,0 +1,41 @@
+
+#container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5em;
+}
+
+#logo {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
+img {
+  padding-top: 20px;
+  width: 100px;
+  height: 100px;
+}
+
+.logo-title {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3em;
+  text-align: center;
+}
+
+.top-word, .bottom-word {
+  display: block;
+}
+
+.underline {
+  text-decoration: underline;
+  color: white;
+}
+.underline:hover {
+  /* color: #007ACC; */
+  cursor: pointer;
+}
+

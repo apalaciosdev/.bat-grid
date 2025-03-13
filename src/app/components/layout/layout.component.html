@@ -1,0 +1,78 @@
+@switch (layout) {
+  @case (layoutType.SINGLE) {
+    <div class="layout" [id]="layoutType.SINGLE">
+      <div class="grid"></div>
+    </div>
+  }
+  @case (layoutType.HORIZONTAL_TWO || layoutType.VERTICAL_TWO) {
+    <div class="layout" [id]="layout">
+      <div class="grid"></div>
+      <div class="grid"></div>
+    </div>
+  }
+  @case (layoutType.HORIZONTAL_THREE || layoutType.VERTICAL_THREE) {
+    <div class="layout" [id]="layout">
+      <div class="grid"></div>
+      <div class="grid"></div>
+      <div class="grid"></div>
+    </div>
+  }
+  @case (layoutType.ONE_TOP_TWO_BOTTOM) {
+    <div class="layout" [id]="layoutType.ONE_TOP_TWO_BOTTOM">
+      <div class="grid"></div>
+      <div class="sub-layout">
+        <div class="grid"></div>
+        <div class="grid"></div>
+      </div>
+    </div>
+  }
+  @case (layoutType.TWO_TOP_ONE_BOTTOM) {
+    <div class="layout" [id]="layoutType.ONE_TOP_TWO_BOTTOM">
+      <div class="sub-layout">
+        <div class="grid"></div>
+        <div class="grid"></div>
+      </div>
+      <div class="grid"></div>
+    </div>
+  }
+  @case (layoutType.ONE_LEFT_TWO_RIGHT) {
+    <div class="layout" [id]="layoutType.ONE_LEFT_TWO_RIGHT">
+      <div class="grid"></div>
+      <div class="sub-layout">
+        <div class="grid"></div>
+        <div class="grid"></div>
+      </div>
+    </div>
+  }
+  @case (layoutType.TWO_LEFT_ONE_RIGHT) {
+    <div class="layout" [id]="layoutType.TWO_LEFT_ONE_RIGHT">
+      <div class="sub-layout">
+        <div class="grid"></div>
+        <div class="grid"></div>
+      </div>
+      <div class="grid"></div>
+    </div>
+  }
+  @case (layoutType.FOUR) {
+    <div class="layout" [id]="layoutType.FOUR">
+      <div class="sub-layout">
+        <div class="grid"></div>
+        <div class="grid"></div>
+      </div>
+      <div class="sub-layout">
+        <div class="grid"></div>
+        <div class="grid"></div>
+      </div>
+    </div>
+  }
+
+
+
+  @default {
+    <div class="layout">
+      <div class="grid">{{layout}}</div>
+    </div>
+  }
+     
+  
+}
