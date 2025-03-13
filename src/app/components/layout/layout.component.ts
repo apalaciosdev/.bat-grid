@@ -9,8 +9,8 @@ import { LayoutType } from '../../shared/models/layout.model';
 })
 
 export class LayoutComponent {
-
   @Input() layout: string = '';
+  @Input() block: boolean = false
 
   layoutType = LayoutType;
 }

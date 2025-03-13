@@ -1,0 +1,15 @@
+@if(modalService.activa){
+<div class="modal">
+	<div [ngClass]="large? 'modal-body-large' : 'modal-body'">
+		<header>
+			<h3>{{title}}</h3>
+			<button type="button" class="modal_close" (click)="modalService.closeById(id)" role="button"
+				aria-label="Tancar">
+				<img src="close.svg" alt="">
+			</button>
+		</header>
+		<br>
+		<ng-content></ng-content>
+	</div>
+</div>
+}

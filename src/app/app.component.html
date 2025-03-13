@@ -1,14 +1,21 @@
 <div>
   <app-logo />
 
-  <div class="sections-container">
+  <section>
 		
-    <div style="height: 300px; width: 300px;">
-      <app-layout [layout]="layoutType.FOUR"/>
+    <div id="left">
+      <app-layout-selector />
     </div>
 
+    <div id="right">
+      asdasdasd
+    </div>
+
+      <!-- <div style="height: 300px; width: 300px;">
+        <app-layout [layout]="layoutType.ONE_LEFT_TWO_RIGHT"/>
+      </div> -->
 
 		<!-- <div class="container" id="left"><GridSelector/></div>
 		<div class="container" id="right">{selectedLayout.value}</div> -->
-	</div>
+	</section>
 </div>

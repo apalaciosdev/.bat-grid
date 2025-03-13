@@ -27,6 +27,32 @@
   cursor: pointer;
 }
 
+.blocked {
+  &, .sub-layout {
+    background-color: #131313 !important;
+    transition: all 0.3s;
+  }
+
+  .grid {
+    background-color: #444444 !important;
+  }
+
+  &:hover {
+    &, .sub-layout {
+      background-color: #272727 !important;
+      transition: all 0.3s;
+      transform: scale(1.02);
+    }
+    
+    .grid {
+      background-color: #888888 !important;
+      transition: all 0.3s;
+      transform: scale(1.08);
+    }
+    cursor: pointer;
+  }
+}
+
 
 #single {
 

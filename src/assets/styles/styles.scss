@@ -1,5 +1,7 @@
+@import "./components/modal.scss";
 @import "./components/logo.scss";
 @import "./components/layout.scss";
+@import "./components/layout-selector.scss";
 
 html,
 body {
@@ -22,4 +24,39 @@ h2 {
   font-weight: 300;
   font-size: 15px;
   text-align: center;
+}
+
+
+
+
+
+
+
+
+
+app-root {
+  section {
+    display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		height: 300px;
+		width: 100%;
+    margin-top: 5em;
+
+    div {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    #left {
+      justify-content: center;
+    }
+  
+    #right {
+      justify-content: center;
+    }
+  }
 }

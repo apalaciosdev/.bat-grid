@@ -1,0 +1,98 @@
+/* MODAL STYLES */
+vn-modal {
+	/* modals are hidden by default */
+	display: none;
+	color: #666666;
+}
+
+.modal {
+	/* modal container fixed across whole screen */
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	margin: auto;
+	width: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	/* z-index must be higher than .modal-background */
+	z-index: 1000;
+	/* enables scrolling for tall modals */
+	overflow: auto;
+	background: rgba(0, 0, 0, 0.836);
+
+	.modal-body {
+		background: #1E1E1E;
+		position: fixed;
+		top: 10%;
+		width: 60%;
+		padding: 1.5em;
+		border-radius: 0.5em;
+		// border-top: solid 10px $main-color;
+		max-height: 75%;
+		overflow: hidden auto;
+		z-index: 1100;
+	
+		& > header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin: -1.5em -1.5em 1em -1.5em;
+			padding: 1em;
+			background: rgb(68, 68, 68);
+
+			h3 {
+				margin: 0;
+				color: rgba(255, 255, 255, 0.733);
+				// font-family: ;
+			}
+
+			button {
+				background: none;
+				padding: 0 0.5em;
+				border: none;
+				min-width: 1em;
+				cursor: pointer;
+				transition: all 0.3s;
+
+				img {
+					width: 30px;
+					height: 30px;
+					padding: 0;
+					padding-top: 5px;
+				}
+
+				&:hover {
+					transition: all 0.3s;
+					transform: scale(1.20);
+				}
+
+			}
+		}
+
+		ng-content {
+			padding: 0 0.5em;
+		}
+	}
+}
+
+.modal-background {
+	/* modal background fixed across whole screen */
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: black;
+	opacity: 0.4;
+	/* z-index must be below .modal and above everything else  */
+	z-index: 900;
+}
+
+.modal-form {
+	white-space: pre-line;
+	.text {
+		margin-bottom: 1em;
+	}
+}
