@@ -1,0 +1,30 @@
+<h3>> Define commands</h3>
+
+<div class="terminal">
+  <!-- Historial con scroll -->
+  <div class="history" id="history">
+    @for (command of commands; track $index) {
+      <div class="command">
+        <div class="command-header">
+          <span class="icons">
+            <img src="delete-terminal.svg" alt="Delete command" title="Delete command">
+            <img src="edit-terminal.svg" alt="Edit command" title="Edit command">
+          </span>
+          <span class="command-text">> {{ command }}</span>
+        </div>
+      </div>
+    }
+  </div>
+
+  <!-- Input fijo -->
+  <div class="input">
+  
+    <span>></span>
+   <input 
+     type="text" 
+     [(ngModel)]="inputCommand" 
+     (keyup.enter)="executeCommand()" 
+     placeholder="Enter a command..."
+   />
+  </div>
+</div>

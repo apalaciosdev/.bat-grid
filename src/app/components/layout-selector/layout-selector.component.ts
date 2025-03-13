@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { LayoutComponent } from "../layout/layout.component";
 import { LayoutType } from '../../shared/models/layout.model';
@@ -13,6 +13,8 @@ import { ModalService } from '../../shared/services/modal.service';
 })
 
 export class LayoutSelectorComponent {
+  @Input() data: any;
+
   get layoutTypes() {
     return Object.values(LayoutType);
   }
@@ -31,7 +33,7 @@ export class LayoutSelectorComponent {
   }
 
   selectLayout(layout: any) {
-    console.log('Selected layout:', layout);
+    this.data.layout = layout
     this.modalService.close();
   }
 }

@@ -4,12 +4,14 @@
   <section>
 		
     <div id="left">
-      <app-layout-selector />
+      <app-layout-selector [data]="data"/>
     </div>
 
     <div id="right">
-      asdasdasd
+      <app-terminal [data]="data"/>
     </div>
+    
+    <!-- {{data | json}} -->
 
       <!-- <div style="height: 300px; width: 300px;">
         <app-layout [layout]="layoutType.ONE_LEFT_TWO_RIGHT"/>

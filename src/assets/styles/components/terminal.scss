@@ -1,0 +1,81 @@
+app-terminal {
+  .terminal {
+    width: 500px;
+    height: 280px;
+    background-color: black;
+    color: white;
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    font-family: monospace;
+    overflow: hidden;
+  }
+  
+  .history {
+    overflow-y: auto;
+    max-height: 250px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow-x: hidden;
+    word-wrap: break-word;
+
+    .command {
+      height: fit-content;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      width: 100%;
+      margin-bottom: 8px;
+      padding: 5px 0;
+
+      .command-header {
+        display: flex;
+        align-items: start;
+        padding-left: 10px;
+        gap: 8px;
+      }
+
+      .icons {
+        display: flex;
+        align-items: center;
+    
+        gap: 5px;
+
+        img {
+          width: 15px;
+          height: 15px;
+          cursor: pointer;
+          padding: 0;
+        }
+
+        .command-text {
+          flex: 1;
+          white-space: pre-wrap;
+          word-break: break-word;
+        }
+      }
+
+      
+    }
+  }
+  
+  .input {
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+
+    // padding-top: 23px;
+    margin-left: 10px;
+    input {
+      font-family: monospace;
+      border: none;
+      padding: 5px;
+      font-size: 16px;
+      background: black;
+      color: white;
+      outline: none;
+      width: 100%;
+
+    }
+  }
+}

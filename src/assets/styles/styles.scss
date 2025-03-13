@@ -1,6 +1,7 @@
 @import "./components/modal.scss";
 @import "./components/logo.scss";
 @import "./components/layout.scss";
+@import "./components/terminal.scss";
 @import "./components/layout-selector.scss";
 
 html,
@@ -26,7 +27,11 @@ h2 {
   text-align: center;
 }
 
-
+h3 {
+  font-size: 15px;
+  font-weight: normal;
+  color: rgb(255, 255, 255, 57%);
+}
 
 
 
