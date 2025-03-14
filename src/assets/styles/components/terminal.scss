@@ -63,9 +63,8 @@ app-terminal {
     display: flex;
     flex-direction: row;
     height: fit-content;
-
-    // padding-top: 23px;
     margin-left: 10px;
+
     input {
       font-family: monospace;
       border: none;
@@ -75,7 +74,31 @@ app-terminal {
       color: white;
       outline: none;
       width: 100%;
+    }
 
+    .cursor {
+      position: relative;
+    }
+    .cursor	i {
+      position: absolute;
+      width: 1px;
+      height: 80%;
+      background-color: gray;
+      left: 5px;
+      top: 10%;
+      animation-name: blink;
+      animation-duration: 1000ms;
+      animation-iteration-count: infinite;
+      opacity: 1;
+    }
+    
+    .cursor input:focus + i {
+      display: none;
+    }
+    
+    @keyframes blink {
+      from { opacity: 1; }
+      to { opacity: 0; }
     }
   }
 }

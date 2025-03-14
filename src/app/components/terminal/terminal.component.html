@@ -1,9 +1,8 @@
 <h3>> Define commands</h3>
 
 <div class="terminal">
-  <!-- Historial con scroll -->
   <div class="history" id="history">
-    @for (command of commands; track $index) {
+    @for (command of data.gridCommands[data.gridSelected]; track $index) {
       <div class="command">
         <div class="command-header">
           <span class="icons">
@@ -16,15 +15,19 @@
     }
   </div>
 
-  <!-- Input fijo -->
   <div class="input">
-  
     <span>></span>
-   <input 
-     type="text" 
-     [(ngModel)]="inputCommand" 
-     (keyup.enter)="executeCommand()" 
-     placeholder="Enter a command..."
-   />
+    <div class="cursor">
+      <input 
+        type="text" 
+        [(ngModel)]="inputCommand" 
+        (keyup.enter)="executeCommand()" 
+        placeholder="Enter a command..."
+        class="rq-form-element"
+        spellcheck="false"
+      />
+      <i></i>
+    </div>
+
   </div>
 </div>

@@ -20,11 +20,18 @@
   background-color: #383f44;
   width: 100%;
   height: 100%;
+  transition: all 0.2s;
 }
 
 .grid:hover {
   background-color: #131313;
   cursor: pointer;
+  transition: all 0.2s;
+}
+
+.selected-grid {
+  background-color: #131313;
+  transition: all 0.2s;
 }
 
 .blocked {

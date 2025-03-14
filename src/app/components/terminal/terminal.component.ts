@@ -11,14 +11,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 export class TerminalComponent {
   @Input() data: any;
 
-  commands: string[] = []; // Almacena los comandos ingresados por el usuario
   inputCommand: string = '';
 
   executeCommand() {
     if (this.inputCommand.trim()) {
-      this.commands.push(this.inputCommand); // Agrega el comando al historial
-      this.inputCommand = ''; // Limpia el input
-      setTimeout(() => this.scrollToBottom(), 50); // Desplaza el historial hacia abajo
+      this.data.gridCommands[this.data.gridSelected].push(this.inputCommand);
+      this.inputCommand = '';
+      setTimeout(() => this.scrollToBottom(), 50); 
     }
   }
 

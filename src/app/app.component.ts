@@ -20,6 +20,7 @@ export class AppComponent {
 
   data = {
     layout: LayoutType.ONE_LEFT_TWO_RIGHT,
-    gridCommands: []
+    gridCommands: [[], [], []],
+    gridSelected: 1
   }
 }

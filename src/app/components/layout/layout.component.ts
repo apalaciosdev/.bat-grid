@@ -9,8 +9,13 @@ import { LayoutType } from '../../shared/models/layout.model';
 })
 
 export class LayoutComponent {
-  @Input() layout: string = '';
+  @Input() data: any = {};
+  @Input() selectedLayout: string = '';
   @Input() block: boolean = false
 
   layoutType = LayoutType;
+
+  setGrid(grid: number) {
+    this.data.gridSelected = grid;
+  }
 }

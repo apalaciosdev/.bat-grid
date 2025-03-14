@@ -1,6 +1,6 @@
 <h3>> Select a layout</h3>
 
-<app-layout [layout]="data.layout"/>
+<app-layout [data]="data" [selectedLayout]="data.layout"/>
 <button (click)="openModal('select-layout-modal')">
   <img src="edit-pencil.svg" alt="">
 </button>
@@ -10,7 +10,7 @@
 <vn-modal id="select-layout-modal" class="modal-form" title="> Choose a layout">
   <div class="content">
     @for (layout of layoutTypes; track $index) {
-      <app-layout [layout]="layout" [block]="true" (click)="selectLayout(layout)"/>
+      <app-layout [data]="data" [selectedLayout]="layout" [block]="true" (click)="selectLayout(layout)"/>
     }
   </div>
 </vn-modal>

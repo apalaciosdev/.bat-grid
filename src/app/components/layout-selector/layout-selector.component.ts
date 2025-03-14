@@ -13,7 +13,7 @@ import { ModalService } from '../../shared/services/modal.service';
 })
 
 export class LayoutSelectorComponent {
-  @Input() data: any;
+  @Input() data: any = {};
 
   get layoutTypes() {
     return Object.values(LayoutType);
@@ -34,6 +34,32 @@ export class LayoutSelectorComponent {
 
   selectLayout(layout: any) {
     this.data.layout = layout
+    this.data.gridSelected = 0;
+
+    switch (layout) {
+      case LayoutType.SINGLE:
+        this.data.gridCommands = [[]];
+        break
+
+      case LayoutType.HORIZONTAL_TWO:
+      case LayoutType.VERTICAL_TWO:
+        this.data.gridCommands = [[], []];
+        break;
+
+      case LayoutType.HORIZONTAL_THREE:
+      case LayoutType.VERTICAL_THREE:
+      case LayoutType.ONE_TOP_TWO_BOTTOM:
+      case LayoutType.TWO_TOP_ONE_BOTTOM:
+      case LayoutType.ONE_LEFT_TWO_RIGHT:
+      case LayoutType.TWO_LEFT_ONE_RIGHT:
+        this.data.gridCommands = [[], [], []];
+        break;
+
+      case LayoutType.FOUR:
+        this.data.gridCommands = [[], [], [], []];
+        break;
+    }
+
     this.modalService.close();
   }
 }
