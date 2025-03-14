@@ -59,11 +59,11 @@
 }
 
 #horizontal-two, #horizontal-three {
-  flex-direction: row;
+  flex-direction: column;
 }
 
 #vertical-two, #vertical-three {
-  flex-direction: column;
+  flex-direction: row;
 }
 
 #one-top-two-bottom, #two-top-one-bottom {
