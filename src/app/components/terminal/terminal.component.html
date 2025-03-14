@@ -6,8 +6,8 @@
       <div class="command">
         <div class="command-header">
           <span class="icons">
-            <img src="delete-terminal.svg" alt="Delete command" title="Delete">
-            <img src="edit-terminal.svg" alt="Edit command" title="Edit">
+            <img src="delete-terminal.svg" alt="Delete command" title="Delete" (click)="deleteCommand($index)">
+            <img src="edit-terminal.svg" alt="Edit command" title="Edit" (click)="editCommand($index)">
           </span>
           <span class="command-text">> {{ command }}</span>
         </div>
@@ -16,7 +16,7 @@
   </div>
 
   <div class="input">
-    <span>></span>
+    <span>{{editMode.status ? 'edit' : null}}></span>
     <div class="cursor">
       <input 
         type="text" 
@@ -25,9 +25,9 @@
         placeholder="Enter a command..."
         class="rq-form-element"
         spellcheck="false"
+        id="inputCommand"
       />
       <i></i>
     </div>
-
   </div>
 </div>
