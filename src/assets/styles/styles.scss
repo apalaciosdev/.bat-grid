@@ -38,25 +38,46 @@ app-root {
   section {
     display: flex;
 		flex-direction: row;
-		justify-content: space-between;
+		justify-content: center;
 		align-items: center;
 		height: 300px;
 		width: 100%;
     margin-top: 5em;
 
     div {
-      width: 100%;
-      height: 100%;
       display: flex;
-      align-items: center;
+      justify-content: safe !important;
+      width: 100%;
+      max-width: 1000px;
+
+      @media screen and (max-width: 948px) {
+        flex-direction: column;
+        gap: 2em;
+
+        #left {
+          width: 100% !important;
+          margin: 20em 0 5em 0;
+        }
+        
+      }
+      
+
+      div {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+  
+      #left {
+        justify-content: center;
+        width: 600px;
+      }
+    
+      #right {
+        justify-content: center;
+      }
     }
 
-    #left {
-      justify-content: center;
-    }
-  
-    #right {
-      justify-content: center;
-    }
   }
 }

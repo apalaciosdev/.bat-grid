@@ -2,13 +2,14 @@
   <app-logo />
 
   <section>
-		
-    <div id="left">
-      <app-layout-selector [data]="data"/>
-    </div>
-
-    <div id="right">
-      <app-terminal [data]="data"/>
+		<div class="container-root">
+      <div id="left">
+        <app-layout-selector [data]="data"/>
+      </div>
+  
+      <div id="right">
+        <app-terminal [data]="data"/>
+      </div>
     </div>
     
     <!-- {{data | json}} -->
