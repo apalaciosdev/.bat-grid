@@ -20,8 +20,8 @@ export class AppComponent {
   layoutType = LayoutType;
 
   data = {
-    layout: LayoutType.FOUR,
-    gridCommands: [[], [], [], []],
+    layout: LayoutType.ONE_LEFT_TWO_RIGHT,
+    gridCommands: [[], [], []],
     gridSelected: 1
   }
 

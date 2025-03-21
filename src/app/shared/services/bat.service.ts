@@ -21,8 +21,6 @@ export class BatService {
   }
 
 
-
-
   generateLayout(data: any): string { 
     const commands = data.gridCommands.map((grid: string[]) => 
       grid.reduce((acc: string, command: string, index: number) => 
@@ -34,11 +32,20 @@ export class BatService {
         return `
           @echo off
           start wt new-tab cmd /k "${commands[0]}" ^
-          ; split-pane -V  cmd /k "${commands[1]}" ^
+          ; split-pane -V  cmd /k "${commands[2]}" ^
           ; move-focus left                        ^
-          ; split-pane -H  cmd /k "${commands[2]}" ^
+          ; split-pane -H  cmd /k "${commands[1]}" ^
           ; move-focus right                       ^
           ; split-pane -H  cmd /k "${commands[3]}"
+        `;
+      
+      case LayoutType.TWO_LEFT_ONE_RIGHT:
+        return `
+          @echo off
+          start wt new-tab cmd /k "${commands[0]}" ^
+          ; split-pane -V  cmd /k "${commands[2]}" ^
+          ; move-focus left                        ^
+          ; split-pane -H  cmd /k "${commands[1]}"
         `;
 
       default:
