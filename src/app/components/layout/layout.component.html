@@ -16,20 +16,6 @@
       <div [class]="data.gridSelected === 1 ? 'grid selected-grid' : 'grid'" (click)="setGrid(1)"></div>
     </div>
   }
-  @case (layoutType.HORIZONTAL_THREE) {
-    <div [class]="block ? 'layout blocked' : 'layout'" [id]="selectedLayout">
-      <div [class]="data.gridSelected === 0 ? 'grid selected-grid' : 'grid'" (click)="setGrid(0)"></div>
-      <div [class]="data.gridSelected === 1 ? 'grid selected-grid' : 'grid'" (click)="setGrid(1)"></div>
-      <div [class]="data.gridSelected === 2 ? 'grid selected-grid' : 'grid'" (click)="setGrid(2)"></div>
-    </div>
-  }
-  @case (layoutType.VERTICAL_THREE) {
-    <div [class]="block ? 'layout blocked' : 'layout'" [id]="selectedLayout">
-      <div [class]="data.gridSelected === 0 ? 'grid selected-grid' : 'grid'" (click)="setGrid(0)"></div>
-      <div [class]="data.gridSelected === 1 ? 'grid selected-grid' : 'grid'" (click)="setGrid(1)"></div>
-      <div [class]="data.gridSelected === 2 ? 'grid selected-grid' : 'grid'" (click)="setGrid(2)"></div>
-    </div>
-  }
   @case (layoutType.ONE_TOP_TWO_BOTTOM) {
     <div [class]="block ? 'layout blocked' : 'layout'" [id]="selectedLayout">
       <div [class]="data.gridSelected === 0 ? 'grid selected-grid' : 'grid'" (click)="setGrid(0)"></div>

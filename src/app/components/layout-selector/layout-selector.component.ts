@@ -46,8 +46,6 @@ export class LayoutSelectorComponent {
         this.data.gridCommands = [[], []];
         break;
 
-      case LayoutType.HORIZONTAL_THREE:
-      case LayoutType.VERTICAL_THREE:
       case LayoutType.ONE_TOP_TWO_BOTTOM:
       case LayoutType.TWO_TOP_ONE_BOTTOM:
       case LayoutType.ONE_LEFT_TWO_RIGHT:

@@ -48,6 +48,60 @@ export class BatService {
           ; split-pane -H  cmd /k "${commands[1]}"
         `;
 
+      case LayoutType.ONE_LEFT_TWO_RIGHT:
+        return `
+          @echo off
+          start wt new-tab cmd /k "${commands[0]}" ^
+          ; split-pane -V  cmd /k "${commands[1]}" ^
+          ; move-focus right                        ^
+          ; split-pane -H  cmd /k "${commands[2]}"
+        `;
+      
+      case LayoutType.HORIZONTAL_TWO:
+        return `
+          @echo off
+          start wt new-tab cmd /k "${commands[0]}" ^
+          ; split-pane -H  cmd /k "${commands[1]}"
+        `;
+      
+      case LayoutType.ONE_TOP_TWO_BOTTOM:
+        return `
+          @echo off
+          start wt new-tab cmd /k "${commands[0]}" ^
+          ; split-pane -H  cmd /k "${commands[1]}" ^
+          ; move-focus down  ^
+          ; split-pane -V cmd /k "${commands[2]}"
+        `;
+      
+      case LayoutType.TWO_TOP_ONE_BOTTOM:
+        return `
+          @echo off
+          start wt new-tab cmd /k "${commands[0]}" ^
+          ; split-pane -H cmd /k "${commands[2]}" ^
+          ; move-focus up    ^
+          ; split-pane -V cmd /k "${commands[1]}"
+        `;
+      
+      case LayoutType.VERTICAL_TWO:
+        return `
+          @echo off
+          start wt new-tab cmd /k "${commands[0]}" ^
+          ; split-pane -V cmd /k "${commands[1]}"
+        `;
+
+      case LayoutType.HORIZONTAL_TWO:
+        return `
+          @echo off
+          start wt new-tab cmd /k "${commands[0]}" ^
+          ; split-pane -H cmd /k "${commands[1]}"
+        `;
+
+      case LayoutType.SINGLE:
+        return `
+          @echo off
+          start wt new-tab cmd /k "${commands[0]}"
+        `;
+
       default:
         return `
           @echo off
