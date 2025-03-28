@@ -13,7 +13,7 @@ export class BatService {
 
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
-    a.download = 'start_terminal.bat';
+    a.download = 'terminal.bat';
 
     document.body.appendChild(a);
     a.click();
@@ -105,12 +105,7 @@ export class BatService {
       default:
         return `
           @echo off
-          start wt new-tab cmd /k "cd C:\Downloads && dir" ^
-          ; split-pane -V  cmd /k "cd /d C:\Users\Dev\Downloads"         ^
-          ; move-focus left                                       ^
-          ; split-pane -H  cmd /k "cd /d C:\Users\Dev\Downloads"      ^
-          ; move-focus right                                      ^
-          ; split-pane -H  cmd /k "cd /d C:\Users\Dev\Downloads"
+          start wt new-tab cmd
         `;
     }
   }
