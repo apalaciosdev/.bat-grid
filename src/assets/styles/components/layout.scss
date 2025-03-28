@@ -35,6 +35,8 @@
 }
 
 .blocked {
+  cursor: pointer;
+  
   &, .sub-layout {
     background-color: #131313 !important;
     transition: all 0.3s;
@@ -56,13 +58,7 @@
       transition: all 0.3s;
       transform: scale(1.08);
     }
-    cursor: pointer;
   }
-}
-
-
-#single {
-
 }
 
 #horizontal-two {

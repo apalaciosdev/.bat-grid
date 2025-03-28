@@ -1,12 +1,13 @@
-@import "./components/modal.scss";
-@import "./components/logo.scss";
-@import "./components/layout.scss";
-@import "./components/terminal.scss";
-@import "./components/layout-selector.scss";
+@use "./components/modal.scss";
+@use "./components/logo.scss";
+@use "./components/layout.scss";
+@use "./components/terminal.scss";
+@use "./components/layout-selector.scss";
 
 html,
 body {
   margin: 0;
+  padding: 0;
   width: 100%;
   height: 100%;
   background-color: #1E1E1E;
@@ -31,6 +32,25 @@ h3 {
   font-size: 15px;
   font-weight: normal;
   color: rgb(255, 255, 255, 57%);
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-wrapper > div {
+  flex: 1;
+}
+
+footer {
+  background: #111;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  margin-top: 4em;
+  font-size: 14px;
 }
 
 
@@ -83,7 +103,7 @@ app-root {
   #generate-btn {
     display: flex;
     justify-content: center;
-    margin-top: 8em;
+    margin-top: 6em;
     width: 100%;
 
     @media screen and (max-width: 948px) {
