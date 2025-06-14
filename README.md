@@ -1,12 +1,12 @@
 # 🦇 .BAT GRID
 
-Design and launch custom terminal layouts... with style 🧩⚡
+Design and launch custom terminal layouts 🧩⚡
 
 ---
 
 ## 🎯 What is this?
 
-A fun little tool to generate `.bat` files that open a custom layout in **Windows Terminal**.  
+A little tool to generate `.bat` files that open a custom layout in **Windows Terminal**.  
 No login, no nonsense. Just pick a layout, add your commands, generate, and boom 💣—you're good to go.
 
 ---
